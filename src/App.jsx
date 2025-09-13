@@ -122,8 +122,6 @@ export default function App() {
             Level: <strong className='capitalize'>{LEVELS[currentLevelIndex]}</strong>
           </div>
           <div className="flex justify-between items-center gap-3">
-            <button className="px-4 py-2 border rounded-md cursor-pointer" onClick={() => { setTimerEnabled((t) => !t) }}>{timerEnabled ? 'Disable Timer' : 'Enable Timer'}</button>
-            <button className="px-4 py-2 border rounded-md cursor-pointer" onClick={() => { restart() }}>Restart</button>
             <div className="text-lg text-gray-700">Score: <strong>{score}</strong></div>
           </div>
 
@@ -134,6 +132,10 @@ export default function App() {
         ) : (
           <div className="p-6 bg-white rounded-xl shadow">Loading...</div>
         )}
+        <div className='flex justify-start mt-4 gap-3'>
+          <button className="px-4 py-2 border rounded-md cursor-pointer" onClick={() => { setTimerEnabled((t) => !t) }}>{timerEnabled ? 'Disable Timer' : 'Enable Timer'}</button>
+          <button className="px-4 py-2 border rounded-md cursor-pointer" onClick={() => { restart() }}>Restart</button>
+        </div>
       </div>
     </div>
   )

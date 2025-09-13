@@ -30,8 +30,6 @@ export default function ResultScreen({ score, maxScore, onRestart, levelReached 
         <div className="mt-6 flex gap-3 justify-center">
           <button onClick={onRestart} className="px-6 py-3 bg-teal-600 text-white rounded-lg cursor-pointer">Restart Quiz</button>
         </div>
-
-        <div className="mt-4 text-sm text-gray-500">Earlier Highest Score Was: <strong>{highNum}</strong></div>
       </div>
     </div>
   )
